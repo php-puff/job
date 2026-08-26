@@ -2,9 +2,9 @@
 
 /*
  * PHP Fiber Framework
- * https://github.com/pffphp/job
- * https://github.com/pffphp/job/issue
- * Copyright (c) PFF
+ * https://github.com/php-puff/job
+ * https://github.com/php-puff/job/issues
+ * Copyright (c) Puff
  */
 
 declare(strict_types=1);
@@ -17,8 +17,8 @@ use Puff\Application\Exception;
 use Puff\Config\Config;
 use Puff\Di\Container;
 use Puff\Job\JobInterface;
-use Puff\Job\ServiceProvider;
 use Puff\Job\Schedule;
+use Puff\Job\ServiceProvider;
 
 final class ServiceProviderTest extends TestCase
 {
@@ -30,7 +30,7 @@ final class ServiceProviderTest extends TestCase
     public function testLoadsFlatJobConfigurationThroughContainer(): void
     {
         $job = new WorkerTestJob();
-        $config = new Config(['jobs' => [WorkerTestJob::class]]);
+        $config = new Config(['job' => [WorkerTestJob::class]]);
         $container = new Container();
         $container->instance(Config::class, $config);
         $container->instance(WorkerTestJob::class, $job);
@@ -85,9 +85,9 @@ final class ServiceProviderTest extends TestCase
     private function application(array $jobs): Application
     {
         $container = new Container();
-        $container->instance(Config::class, new Config(['jobs' => []]));
+        $container->instance(Config::class, new Config(['job' => []]));
         $app = new Application($container);
-        $container->instance(Config::class, new Config(['jobs' => $jobs]));
+        $container->instance(Config::class, new Config(['job' => $jobs]));
         return $app;
     }
 }

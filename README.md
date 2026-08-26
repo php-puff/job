@@ -11,7 +11,7 @@ composer require puff/job:dev-main
 Register job classes directly in the application configuration:
 
 ```php
-'jobs' => [
+'job' => [
     App\Job\CleanupJob::class,
 ],
 ```

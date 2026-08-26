@@ -9,4 +9,8 @@
 
 declare(strict_types=1);
 
-return [];
+return [
+    // App\Job\Job::class,
+    // App\Job\Test::class,
+    // App\Job\Schedule::class
+];

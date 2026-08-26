@@ -19,7 +19,7 @@ use Puff\Di\Container;
 
 final class ServiceProvider implements Contract
 {
-    private const CONFIG_KEY = 'jobs';
+    private const CONFIG_KEY = 'job';
 
     private ?Scheduler $scheduler = null;
 
