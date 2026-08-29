@@ -10,7 +10,7 @@
 declare(strict_types=1);
 
 return [
-    // App\Job\Job::class,
-    // App\Job\Test::class,
-    // App\Job\Schedule::class
+    // Job\Job::class,
+    // Job\Test::class,
+    // Job\Schedule::class
 ];
