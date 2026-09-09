@@ -23,4 +23,5 @@ final class ConsoleProviderTest extends TestCase
         self::assertCount(1, $commands);
         self::assertSame('job', $commands[0]->name());
     }
+
 }
