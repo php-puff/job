@@ -14,6 +14,7 @@
         "php": "^8.2",
         "puff/application": "dev-main",
         "puff/async": "dev-main",
+        "puff/console": "dev-main",
         "psr/log": "^3.0"
     },
     "require-dev": {
@@ -36,6 +37,9 @@
             "config": {"job.php": "config/job.php"},
             "apps": [
                 "Puff\\Job\\ServiceProvider"
+            ],
+            "commands": [
+                "Puff\\Job\\ConsoleProvider"
             ]
         }
     },

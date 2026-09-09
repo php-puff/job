@@ -8,6 +8,14 @@ Fiber-based, second-level cron scheduling for PHP Unison Fiber Framework. The pa
 composer require puff/job:dev-main
 ```
 
+Installing the component also registers its code generator with Puff Console:
+
+```bash
+./puff job Cleanup
+```
+
+The command is absent when `puff/job` is not installed.
+
 Register job classes directly in the application configuration:
 
 ```php
