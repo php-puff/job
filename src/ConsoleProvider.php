@@ -15,11 +15,12 @@ use Puff\Console\CommandProvider;
 use Puff\Console\Contract;
 use Puff\Console\GenerateCommand;
 use Puff\Console\Generator;
+use Psr\Container\ContainerInterface;
 
 final class ConsoleProvider implements CommandProvider
 {
     /** @return iterable<Contract> */
-    public function commands(string $root): iterable
+    public function commands(string $root, ContainerInterface $container): iterable
     {
         yield new GenerateCommand('job', 'Job', \dirname(__DIR__) . '/stub/job.stub', new Generator($root));
     }
